@@ -1,0 +1,4 @@
+# This file will ignore files and folders for prettier
+
+build
+node_modules

@@ -1,0 +1,4 @@
+# This file will ignore files and folders for eslint
+
+build
+node_modules
