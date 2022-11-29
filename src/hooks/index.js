@@ -1,0 +1,1 @@
+export { useFetchArticles } from './useFetchArticles';
