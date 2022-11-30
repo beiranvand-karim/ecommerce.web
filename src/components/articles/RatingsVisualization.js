@@ -29,5 +29,5 @@ export const RatingsVisualization = ({ averageRating }) => {
 };
 
 RatingsVisualization.propTypes = {
-  averageRating: PropTypes.number
+  averageRating: PropTypes.string
 };
