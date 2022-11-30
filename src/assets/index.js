@@ -1,2 +1,1 @@
-export { Star } from './Star';
-export { Truck } from './Truck';
+export * from './articles';
