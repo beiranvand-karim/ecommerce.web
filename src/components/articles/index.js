@@ -1,0 +1,1 @@
+export { RatingsVisualization } from './RatingsVisualization';
