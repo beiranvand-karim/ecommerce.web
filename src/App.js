@@ -1,4 +1,4 @@
-import { environmentVariables, EnvironmentVariables } from './environmentVariables';
+import { environmentVariables, EnvironmentVariables } from './injectables';
 import { GlobalStyles } from './styles';
 import Router from './Router';
 

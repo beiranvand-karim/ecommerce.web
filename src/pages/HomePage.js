@@ -1,3 +1,9 @@
+import { filteringConfigurations, FilteringConfigurations } from '../injectables';
+
 export const HomePage = () => {
-  return <span>Home page</span>;
+  return (
+    <FilteringConfigurations.Provider value={filteringConfigurations}>
+      <span>Home page</span>
+    </FilteringConfigurations.Provider>
+  );
 };

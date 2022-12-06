@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
-import { EnvironmentVariables } from '../environmentVariables';
+import { EnvironmentVariables } from '../injectables';
 
 export const useFetchArticles = () => {
   const [articles, setArticles] = useState(null);
