@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { sv } from 'date-fns/locale';
 import PropTypes from 'prop-types';
 
-import { Truck } from '../../assets';
+import { Truck } from '../assets/articles';
 
 const ExpectedDeliveryDateFormatted = styled.div`
   font-style: normal;
