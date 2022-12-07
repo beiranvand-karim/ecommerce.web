@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { HomePage } from './pages';
 import React, { lazy, Suspense } from 'react';
+
+import { HomePage } from './pages';
 
 const NotFoundLazyPage = lazy(() => import('./pages/NotFoundPage'));
 
 const NotFoundPage = () => (
-  <Suspense>
+  <Suspense fallback={<>Loading ...</>}>
     <NotFoundLazyPage />
   </Suspense>
 );
