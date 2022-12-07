@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { Flame } from '../../assets';
+import { Flame } from '../assets/articles';
 
 const SoldTodayValueAndDescribingText = styled.span`
   font-size: 12px;

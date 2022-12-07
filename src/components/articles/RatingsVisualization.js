@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { Star } from '../../assets';
+import { Star } from '../assets/articles';
 
 const AverageRatingValue = styled.span`
   font-size: 12px;
