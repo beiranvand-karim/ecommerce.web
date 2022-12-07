@@ -4,6 +4,7 @@ import axios from 'axios';
 import { EnvironmentVariables } from '../injectables';
 
 export const useFetchArticles = () => {
+  const [originalArticles, setOriginalArticles] = useState(null);
   const [articles, setArticles] = useState(null);
   const [error, setError] = useState(null);
   const [articlesLoading, setArticlesLoading] = useState(false);
@@ -22,6 +23,7 @@ export const useFetchArticles = () => {
         }
       });
       setArticles(res.data.articles);
+      setOriginalArticles(res.data.articles);
     } catch (capturedError) {
       /**
        * log the error to sentry, kibana ...
@@ -40,5 +42,18 @@ export const useFetchArticles = () => {
 
   const articlesError = error && 'Failed to fetch articles.';
 
-  return { articles, articlesError, articlesLoading };
+  const filterArticlesByPriceAmount = (isActive, dividingPriceAmount) => {
+    if (isActive) {
+      const filterArticles = originalArticles?.filter(
+        (article) => article.price.amount < dividingPriceAmount
+      );
+      Array.isArray(filterArticles) && filterArticles.length === 0
+        ? setArticles(null)
+        : setArticles(filterArticles);
+    } else {
+      setArticles(originalArticles);
+    }
+  };
+
+  return { articles, articlesError, articlesLoading, filterArticlesByPriceAmount };
 };
