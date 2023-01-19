@@ -27,9 +27,11 @@ Your app is ready to be deployed!
 
 follow the bullet point detailed below to run project in development mode.
 
- - Clone project using `git` version control.
- - Install packages using command in terminal `yarn install`.
- - Create a `.env` file in the root directory of the project. Copy the environment variables from the `.env.example`.
-   Make necessary change to the environment variables based on the environment. 
- - Then run command in terminal `yarn start`.
- - Run browser with disable `CORS`. for example: `open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
+- Install the latest release of `Node.js`.
+- Clone project using `git` version control.
+- Install packages using command in terminal `yarn install`.
+- Create a `.env` file in the root directory of the project. Copy the environment variables from the `.env.example`.
+  Make necessary change to the environment variables based on the environment.
+- Load environment variables into the `index.html` by running command `yarn react-env` in terminal.
+- Then run command in terminal `yarn start`.
+- Run browser with disabled `CORS`. for example here's the command to do it in a MAC computer: `open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
